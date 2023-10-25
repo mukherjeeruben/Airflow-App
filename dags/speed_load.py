@@ -18,7 +18,7 @@ with DAG(
     max_active_runs = 1,
     schedule_interval = '*/30 10-11 * * 1-5',
     start_date = days_ago(0),
-    tags = ['de_core']
+    tags = ['de_core', 'data_pull']
 ) as dag:
     
     start = start_operator(

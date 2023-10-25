@@ -4,8 +4,8 @@ from sqlalchemy import create_engine, text
 SQL_SPECS ={"SQL_DATABASE" : "airflowpoc",
             "SQL_HOST" : "aws.connect.psdb.cloud",
             "SQL_PORT" : "3306",
-            "SQL_USER" : "cwbcsa2kssyxfgep4xeh",
-            "SQL_PASSWORD" : "pscale_pw_eDRDmeMCwboQPBGankrf6eqk6E9HEcgNwkY4I2LV1KK",
+            "SQL_USER" : "63s9zokfxqmfi01fnktj",
+            "SQL_PASSWORD" : "pscale_pw_SU1bPuzj9FEY0LItmr3NpWOQ6KX2lXxDDxuxzVWb6yK",
             "ca_path" : "/etc/ssl/certs/ca-certificates.crt"}
 
 class sqlHook:
