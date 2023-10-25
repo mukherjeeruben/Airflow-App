@@ -1,2 +1,6 @@
-# Airflow-Roadmap
- Airflow template app with MySQL service integration 
+Airflow on Windows - Docker
+Execute (CMD) :
+docker-compose build
+docker-compose up
+
+Hosted on http://loaclhost:8080
