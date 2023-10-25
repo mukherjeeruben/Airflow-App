@@ -18,12 +18,12 @@ with DAG(
     max_active_runs = 1,
     schedule_interval = '*/30 10-11 * * 1-5',
     start_date = days_ago(0),
-    tags = ['de_core', 'data_pull']
+    tags=['de_core', 'data_pull', 'data_push',]
 ) as dag:
     
     start = start_operator(
-        task_id = 'start_speed_load',
-        run_id = ''
+        task_id='start_speed_load',
+        run_id=''
     )
 
     with TaskGroup("buckettosql", tooltip='buckettosql') as buckettosql:
