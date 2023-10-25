@@ -1,5 +1,5 @@
-Airflow on Windows - Docker
-Execute (CMD) :
+Airflow on Windows - Docker  
+Execute (CMD) :  
 docker-compose build  
 docker-compose up
 
