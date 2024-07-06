@@ -1,3 +1,6 @@
 sqlalchemy
 pymysql
 sqlparse
+dropbox
+pytest
+celery

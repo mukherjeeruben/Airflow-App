@@ -1,23 +1,25 @@
 from sqlalchemy import create_engine, text
-# from config.app_config import SQL_SPECS
 
-SQL_SPECS ={"SQL_DATABASE" : "airflowpoc",
-            "SQL_HOST" : "aws.connect.psdb.cloud",
-            "SQL_PORT" : "3306",
-            "SQL_USER" : "63s9zokfxqmfi01fnktj",
-            "SQL_PASSWORD" : "pscale_pw_SU1bPuzj9FEY0LItmr3NpWOQ6KX2lXxDDxuxzVWb6yK",
+class sql_config:
+    def __init__(self):
+        self.SQL_SPECS ={"SQL_DATABASE" : "",
+            "SQL_HOST" : "",
+            "SQL_PORT" : "",
+            "SQL_USER" : "",
+            "SQL_PASSWORD" : "",
             "ca_path" : "/etc/ssl/certs/ca-certificates.crt"}
 
-class sqlHook:
-    def create_connection(self):
-        '''Create sqlalchemy connection object for mysql'''
-        user = SQL_SPECS["SQL_USER"]
-        password = SQL_SPECS["SQL_PASSWORD"]
 
-        host = SQL_SPECS["SQL_HOST"]
-        port = SQL_SPECS["SQL_PORT"]
-        database = SQL_SPECS["SQL_DATABASE"]
-        ssl_args = {'ssl_ca': SQL_SPECS["ca_path"]}
+class sqlHook(sql_config):
+    def create_connection(self):
+        '''Create sqlalchemy connection object for mysql (planetscale)'''
+        user = self.SQL_SPECS["SQL_USER"]
+        password = self.SQL_SPECS["SQL_PASSWORD"]
+
+        host = self.SQL_SPECS["SQL_HOST"]
+        port = self.SQL_SPECS["SQL_PORT"]
+        database = self.SQL_SPECS["SQL_DATABASE"]
+        ssl_args = {'ssl_ca': self.SQL_SPECS["ca_path"]}
         db_string = "mysql+pymysql://" + user + ":" + password + "@" + host + ":" + port + "/" + database
 
         try:

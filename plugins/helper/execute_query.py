@@ -8,7 +8,6 @@ class ExecuteQuery:
         query_type = str(sqlparse.parse(query_string)[0].get_type()).upper()
         return query_type
 
-
     def execute(self, query, query_params=None):
         sqlhookobj = sqlHook()
         try:
